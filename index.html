@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics & STEM Educator - Physicswallah</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Light background */
+        }
+        /* Custom Tailwind Configuration for primary color */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pw-primary': '#4f46e5', /* Indigo for PW feel */
+                        'pw-secondary': '#8b5cf6', /* Violet accent */
+                        'pw-bg': '#f7f9fc',
+                        'pw-text': '#1f2937',
+                    }
+                }
+            }
+        }
+        /* Simple scroll-based animation trigger (optional, subtle) */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tech-based pattern for Hero section */
+        .bg-tech-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        .skill-badge {
+            /* Applied in HTML using Tailwind classes, but this ensures consistent style */
+            @apply px-4 py-2 rounded-full text-sm font-medium shadow-md transition transform hover:scale-105;
+        }
+    </style>
+</head>
+<body class="text-pw-text">
+
+    <!-- Header & Navigation -->
+    <header class="shadow-md bg-white sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-xl font-extrabold text-pw-primary">
+                PW STEM Educator
+            </div>
+            <nav class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-pw-secondary transition duration-150">About</a>
+                <a href="#expertise" class="text-gray-600 hover:text-pw-secondary transition duration-150">Expertise</a>
+                <a href="#projects" class="text-gray-600 hover:text-pw-secondary transition duration-150">Projects</a>
+                <a href="#contact" class="hidden sm:inline-block px-3 py-1 bg-pw-primary text-white rounded-lg hover:bg-pw-secondary transition duration-150 font-medium">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Tech Pattern -->
+    <section class="py-16 md:py-24 bg-pw-primary text-white bg-tech-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Profile Card/Text -->
+                <div class="visible">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                        ANKIT GUPTA
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-light mb-6">
+                        Robotics & STEM Educator
+                    </p>
+                    <div class="inline-block px-4 py-2 bg-white text-pw-primary rounded-full font-semibold shadow-lg mb-8 text-lg">
+                        @ Physicswallah (PW)
+                    </div>
+                    <p class="text-gray-200 text-lg max-w-lg">
+                        Empowering the next generation of innovators through practical Robotics, Coding, and foundational Science, Technology, Engineering, and Math (STEM) principles.
+                    </p>
+                    <a href="#contact" class="mt-8 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-pw-primary bg-white hover:bg-gray-100 transition duration-300 shadow-xl">
+                        Start a Conversation
+                    </a>
+                </div>
+
+                <!-- Profile Image Placeholder -->
+                <div class="flex justify-center md:justify-end fade-in-up">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-200 overflow-hidden shadow-2xl border-4 border-pw-secondary p-1">
+                        <!-- Placeholder Image -->
+                        <img src="https://uploads.onecompiler.io/445xrfhqr/445xsm4qd/WhatsApp%20Image%202025-11-28%20at%2020.14.17_736208e2.jpg"
+
+                             alt="Profile Picture of [Your Name]"
+                             class="w-full h-full object-cover rounded-full"
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x800/6D28D9/ffffff?text=Educator+Photo'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Mission Statement (Updated Icons) -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pw-text mb-4 fade-in-up">Our Mission in Education</h2>
+            <p class="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto fade-in-up">
+                My goal is to transcend textbook learning by fostering a hands-on, project-based curriculum that transforms complex concepts into tangible, exciting creations.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value Prop 1: Project-Based Learning (Robot Arm Icon) -->
+                <div class="bg-pw-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 fade-in-up">
+                    <svg class="w-10 h-10 text-pw-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><!-- Robot Arm -->
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11l-3 3-3-3m0 0V4m6 7V4m-3 7v10M4 17h16m-4-6h4a2 2 0 012 2v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2a2 2 0 012-2h4"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Robotics Integration</h3>
+                    <p class="text-gray-500">Focusing on real-world applications of physics and engineering through build challenges and design thinking.</p>
+                </div>
+                <!-- Value Prop 2: Computational Thinking (Code Brackets Icon - Kept) -->
+                <div class="bg-pw-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 fade-in-up" style="transition-delay: 0.1s;">
+                    <svg class="w-10 h-10 text-pw-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><!-- Code Brackets -->
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Computational Thinking</h3>
+                    <p class="text-gray-500">Integrating Python and Arduino programming to bring robotic systems to life.</p>
+                </div>
+                <!-- Value Prop 3: Innovation & Creativity (Chip/CPU Icon) -->
+                <div class="bg-pw-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 fade-in-up" style="transition-delay: 0.2s;">
+                    <svg class="w-10 h-10 text-pw-secondary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><!-- CPU / Chip -->
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h14v14H5V5zm6 4v2h2V9h-2zm-2 4h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2z"></path>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2">Hardware Prototyping</h3>
+                    <p class="text-gray-500">Guiding students from ideation to final prototype, fostering creative problem-solving skills with microcontrollers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section (Dark Background for Tech Feel) -->
+    <section id="expertise" class="py-16 md:py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 fade-in-up">My Core Expertise</h2>
+            <p class="text-center text-lg text-gray-400 mb-12 fade-in-up">Key technologies and educational domains I cover at PW.</p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="skill-badge bg-pw-secondary text-white">Full-Stack Robotics (Hardware & Software)</span>
+                <span class="skill-badge bg-pw-primary text-white">IoT Systems & Sensor Integration</span>
+                <span class="skill-badge bg-white text-gray-900 font-bold">Python & MicroPython</span>
+                <span class="skill-badge bg-pw-secondary text-white">Control Systems (PID)</span>
+                <span class="skill-badge bg-pw-primary text-white">CAD & 3D Printing Prototyping</span>
+                <span class="skill-badge bg-white text-gray-900 font-bold">Machine Learning Basics</span>
+                <span class="skill-badge bg-pw-secondary text-white">STEM Curriculum Development</span>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Projects/Achievements Section -->
+    <section id="projects" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pw-text mb-4 fade-in-up">Featured Student Projects & Successes</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 fade-in-up">Showcasing the impact of our Robotics Lab curriculum.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-pw-bg rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 fade-in-up">
+                    <h3 class="text-xl font-bold text-pw-primary mb-2">Autonomous Line-Follower</h3>
+                    <p class="text-sm text-gray-500 mb-3">Microcontroller Challenge (2025)</p>
+                    <p class="text-gray-700">Guided students to develop an Arduino-based robot capable of navigating complex tracks using PID control. Achieved 1st place in the regional competition.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-pw-bg rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 fade-in-up" style="transition-delay: 0.1s;">
+                    <h3 class="text-xl font-bold text-pw-primary mb-2">IoT Weather Station</h3>
+                    <p class="text-sm text-gray-500 mb-3">Sensor & Data Logging Project (2024)</p>
+                    <p class="text-gray-700">Oversaw a team that built a working ESP32-based station for real-time data collection and cloud integration using MQTT protocol.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-pw-bg rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 fade-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-xl font-bold text-pw-primary mb-2">AI-Powered Sorting Arm (2023)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Advanced Robotics Module</p>
+                    <p class="text-gray-700">Introduced students to basic Machine Learning concepts to train a robotic arm for object recognition and sorting, a successful capstone project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-20 bg-pw-primary text-white">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-lg mb-8 text-gray-200">
+                Interested in collaborating on a new curriculum, discussing STEM initiatives, or learning more about the PW Robotics Lab? Reach out!
+            </p>
+
+            <div class="space-y-4">
+                <a href="mailto:ankitgupta22410@gmai.com" class="block w-full px-6 py-3 border border-transparent text-base font-medium rounded-lg text-pw-primary bg-white hover:bg-gray-100 transition duration-300 shadow-xl">
+                    Email: ankitgupta22410@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/ankit-gupta-a43091272?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="block w-full px-6 py-3 border border-white text-base font-medium rounded-lg text-white hover:bg-white hover:text-pw-primary transition duration-300">
+                    LinkedIn: https://www.linkedin.com/in/ankit-gupta-a43091272?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; <span id="current-year"></span> ANKIT GUPTA. Robotics & STEM Educator at Physicswallah.
+        </div>
+    </footer>
+
+    <!-- JavaScript for dynamic year and scroll visibility -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Simple scroll observer for fade-in effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in-up');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
